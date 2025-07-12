@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kastelenspel</title>
+    <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+<div class="settings-icon" onclick="toggleSettings()">⚙️</div>
+
+<div class="settings-panel hidden" id="settingsPanel">
+    <label>Min prijs: <input type="number" id="minPrice" value="1" /></label>
+    <label>Max prijs: <input type="number" id="maxPrice" value="5" /></label>
+    <label>Refresh-tijd (min): <input type="number" id="refreshTime" value="5" /></label>
+    <div id="scarcityControls" style="margin-top: 1rem;"></div>
+
+    <button onclick="applySettings()">Toepassen</button>
+    <button onclick="refresh()">Refresh</button>
+</div>
+
+
+<div id="itemsContainer"></div>
+
+<script src="main.js"></script>
+</body>
+</html>
